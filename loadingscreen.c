@@ -1,13 +1,13 @@
 modded class LoadingScreen
 {
-	ref TStringArray MyFuckingLoadingScreenArray = {
+	ref TStringArray MyLoadingScreenArray = {
 		"My_loading_screenshow\\images\\loadingscreen_namalsk_01.edds",
 		"My_loading_screenshow\\images\\loadingscreen_namalsk_02.edds",
 		"My_loading_screenshow\\images\\loadingscreen_namalsk_03.edds"};
 
 	override void Show()
 	{		
-		string preel = MyFuckingLoadingScreenArray.GetRandomElement();
+		string preel = MyLoadingScreenArray.GetRandomElement();
 		m_ImageWidgetBackground.LoadMaskTexture("My_loading_screenshow/data/ls_mask.paa");
 		m_ImageWidgetBackground.LoadImageFile(0, preel);
 		m_ImageLogoMid.Show(false);
@@ -19,7 +19,7 @@ modded class LoadingScreen
 
 modded class LoginTimeBase extends UIScriptedMenu
 {
-	ref TStringArray MyFuckingLoadingScreenArray = {
+	ref TStringArray MyLoadingScreenArray = {
 		"My_loading_screenshow\\images\\loadingscreen_namalsk_01.edds",
 		"My_loading_screenshow\\images\\loadingscreen_namalsk_02.edds",
 		"My_loading_screenshow\\images\\loadingscreen_namalsk_03.edds"};
@@ -29,7 +29,7 @@ modded class LoginTimeBase extends UIScriptedMenu
 		super.Show();
 		if (layoutRoot)
 		{
-			string preel = MyFuckingLoadingScreenArray.GetRandomElement();
+			string preel = MyLoadingScreenArray.GetRandomElement();
 			ImageWidget background = ImageWidget.Cast( layoutRoot.FindAnyWidget("Background"));
 			background.LoadImageFile(0, preel);  
 		}
@@ -38,7 +38,7 @@ modded class LoginTimeBase extends UIScriptedMenu
 
 modded class LoginQueueBase extends UIScriptedMenu
 {
-	ref TStringArray MyFuckingLoadingScreenArray = {
+	ref TStringArray MyLoadingScreenArray = {
 		"My_loading_screenshow\\images\\loadingscreen_namalsk_01.edds",
 		"My_loading_screenshow\\images\\loadingscreen_namalsk_02.edds",
 		"My_loading_screenshow\\images\\loadingscreen_namalsk_03.edds"};
@@ -48,7 +48,7 @@ modded class LoginQueueBase extends UIScriptedMenu
 		super.Show();
 		if (layoutRoot)
 		{
-			string preel = MyFuckingLoadingScreenArray.GetRandomElement();
+			string preel = LoadingScreenArray.GetRandomElement();
 			ImageWidget background = ImageWidget.Cast( layoutRoot.FindAnyWidget("Background"));
 			background.LoadImageFile(0, preel);  
 		}
